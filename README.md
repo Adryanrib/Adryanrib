@@ -1,4 +1,4 @@
-# 👨‍💻 Adryan Ribeiro
+# Adryan Ribeiro
 
 **`Engenheiro de Software`**
 
@@ -19,7 +19,7 @@ Me chamo Adryan Ribeiro Oliveirar, tenho 18 anos e sou natural de Goianésia,Goi
             src="https://custom-icon-badges.demolab.com/github/followers/Adryanrib?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=seguidores&logoColor=white"
         />
     </a>
-    <a href="COLE_AQUI_SEU_LINK_DO_LINKEDIN">
+    <a href="https://www.linkedin.com/in/adryan-ribeiro-6231793a7/">
         <img 
             alt="LinkedIn" 
             title="Meu LinkedIn" 
