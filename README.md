@@ -1,16 +1,12 @@
-# Adryan Ribeiro
+# Adryan Ribeiro Oliveira
 
 **`Engenheiro de Software`**
 
-Me chamo Adryan Ribeiro Oliveirar, tenho 18 anos e sou natural de Goianésia,Goiás. Desde criança, sempre tive grande interesse por tecnologia e computação, o que me motivou a seguir na área de desenvolvimento de software. Atualmente, curso Engenharia de Software, buscando evoluir tanto na parte técnica quanto na construção de soluções práticas e eficientes.
+Me chamo Adryan Ribeiro Oliveira, tenho 18 anos e sou natural de Goianésia,Goiás. Desde criança, sempre tive grande interesse por tecnologia e computação, o que me motivou a seguir na área de desenvolvimento de software. Atualmente, curso Engenharia de Software, buscando evoluir tanto na parte técnica quanto na construção de soluções práticas e eficientes.
 
 <p align="left">
     <a href="https://github.com/Adryanrib?tab=repositories&sort=stargazers">
-        <img 
-            alt="Total de Estrelas" 
-            title="Estrelas no GitHub" 
-            src="https://custom-icon-badges.demolab.com/github/stars/Adryanrib?color=55960c&style=for-the-badge&labelColor=488207&logo=star&label=estrelas"
-        />
+        <img alt="Total de Estrelas" title="Estrelas no GitHub" src="https://custom-icon-badges.demolab.com/github/stars/Adryanrib?style=for-the-badge&logo=star&logoColor=FFFFFF&label=estrelas&labelColor=C9A300&color=FFE066"/>
     </a>
     <a href="https://github.com/Adryanrib?tab=followers">
         <img 
@@ -23,7 +19,7 @@ Me chamo Adryan Ribeiro Oliveirar, tenho 18 anos e sou natural de Goianésia,Goi
         <img 
             alt="LinkedIn" 
             title="Meu LinkedIn" 
-            src="https://custom-icon-badges.demolab.com/badge/LinkedIn-Conectar-blue?style=for-the-badge&logo=linkedin&logoColor=white"
+            src="https://custom-icon-badges.demolab.com/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white"
         />
     </a>
 </p>
@@ -51,14 +47,15 @@ Me chamo Adryan Ribeiro Oliveirar, tenho 18 anos e sou natural de Goianésia,Goi
     alt="GitHub Stats" 
     height="200" 
     style="padding-right: 10px;" 
-    src="https://github-readme-stats.vercel.app/api?username=Adryanrib&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br" 
+    src="https://github-readme-stats.vercel.app/api?username=Adryanrib&show_icons=true&theme=tokyonight&locale=pt-br&cache_seconds=21600" 
   />
 
-<img 
-      align="left" 
-      alt="GitHub Stats" 
-      height="200" 
-      src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adryanrib&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9" 
+  <img 
+    align="left" 
+    alt="Tecnologias" 
+    height="200" 
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adryanrib&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9&cache_seconds=21600" 
   />
+</p>
 
 </p>
