@@ -3,6 +3,7 @@ from collections import Counter
 from xml.sax.saxutils import escape
 from pathlib import Path
 U='Adryanrib'
+MONTHS=['','Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
 def save(name,w,h,body):
     Path(name).write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" font-family="monospace">{body}</svg>')
 def txt(x,y,s,size=24,color='#e6edf3',extra=''):
@@ -29,13 +30,13 @@ for i,d in enumerate(days):
     date=dt.date.fromisoformat(d['date']); week,row=divmod(i+offset,7)
     x=39+week*15.2; y=25+row*15.2
     if date.month!=last:
-        b+=txt(x,15,calendar.month_abbr[date.month],12,'#7d8590');last=date.month
+        b+=txt(x,15,MONTHS[date.month],12,'#7d8590');last=date.month
     delay=(week+row*.5)*.065
     b+=f'<rect x="{x}" y="{y}" width="13" height="13" rx="2" fill="{colors[min(4,d["level"])]}"><animate attributeName="opacity" values="0;1" begin="{delay:.2f}s" dur=".35s" fill="freeze"/></rect>'
     if d['level']:
         b+=f'<rect x="{x}" y="{y}" width="13" height="13" rx="2" fill="#b4ffaa" opacity="0"><animate attributeName="opacity" values="0;.85;0" begin="{delay:.2f}s" dur=".6s" fill="freeze"/></rect>'
-for r,n in [(1,'Mon'),(3,'Wed'),(5,'Fri')]: b+=txt(1,36+r*15.2,n,11,'#7d8590')
-b+=txt(39,151,f'{total:,} contributions in the last year',14)
+for r,n in [(1,'Seg'),(3,'Qua'),(5,'Sex')]: b+=txt(1,36+r*15.2,n,11,'#7d8590')
+b+=txt(39,151,f'{total:,} contribuições no último ano',14)
 save('contrib-heatmap.svg',860,158,b)
 counts=[d['count'] for d in days];active=sum(c>0 for c in counts)
 run=longest=0
@@ -48,18 +49,18 @@ for c in reversed(counts[:-1] if not counts[-1] else counts):
 best=max(counts)
 b=rect(1,1,838,878,'#0d1117','rx="12" stroke="#30363d"')
 for x,c in [(22,'#f85149'),(40,'#d29922'),(58,'#3fb950')]: b+=f'<circle cx="{x}" cy="19" r="5" fill="{c}"/>'
-b+=txt(420,24,'contributions / statistics',15,'#7d8590','text-anchor="middle"')
-vals=[('current streak',cur,'days','#39d353'),('longest streak',longest,'days','#e6edf3'),('contributions',total,'in the last year','#e6edf3'),('active days',active,f'of {len(days)} days','#e6edf3'),('best day',best,'contributions','#e6edf3'),('avg / active day',round(total/active,1) if active else 0,'contributions','#e6edf3')]
+b+=txt(420,24,'contribuições / estatísticas',15,'#7d8590','text-anchor="middle"')
+vals=[('sequência atual',cur,'dias','#39d353'),('maior sequência',longest,'dias','#e6edf3'),('contribuições',total,'no último ano','#e6edf3'),('dias ativos',active,f'de {len(days)} dias','#e6edf3'),('melhor dia',best,'contribuições','#e6edf3'),('média / dia ativo',round(total/active,1) if active else 0,'contribuições','#e6edf3')]
 for i,(label,v,cap,color) in enumerate(vals):
     x=20+(i%2)*408;y=54+(i//2)*166
     tile=rect(x,y,392,150,'#161b22','rx="8"')+txt(x+20,y+32,label,21,'#7d8590')+txt(x+20,y+91,f'{v:,}',52,color,'font-weight="bold"')+txt(x+20,y+127,cap,18,'#7d8590')
     b+=f'<g>{tile}<animate attributeName="opacity" values="0;1" begin="{i*.15:.2f}s" dur=".45s" fill="freeze"/></g>'
-b+=txt(22,582,'contributions / month',21,'#7d8590')
+b+=txt(22,582,'contribuições / mês',21,'#7d8590')
 months=Counter()
 for d in days: months[d['date'][:7]]+=d['count']
 peak=max(1,*months.values());bw=790/len(months)
 for i,(m,v) in enumerate(sorted(months.items())):
     x=25+i*bw;h=190*v/peak
     b+=f'<rect x="{x}" y="{824-h}" width="{bw*.68}" height="{h}" fill="#26a641"><animate attributeName="height" from="0" to="{h}" begin="{1+i*.06}s" dur=".6s" fill="freeze"/><animate attributeName="y" from="824" to="{824-h}" begin="{1+i*.06}s" dur=".6s" fill="freeze"/></rect>'
-    b+=txt(x,848,calendar.month_abbr[int(m[-2:])],13,'#7d8590')
+    b+=txt(x,848,MONTHS[int(m[-2:])],13,'#7d8590')
 save('stats.svg',840,880,b)
