@@ -1,5 +1,16 @@
 <p align="center">
-  <img src="panel.svg" alt="Adryan Ribeiro Oliveira — Engenheiro de Software" width="100%">
+  <img src="https://raw.githubusercontent.com/Adryanrib/Adryanrib/output/github-snake-dark.svg" width="100%" alt="Contribuições animadas">
+</p>
+<p align="center">
+  <img src="ascii-portrait.svg" width="48%" alt="Retrato ASCII animado de Adryan">
+  <img src="https://github-readme-stats.vercel.app/api?username=Adryanrib&amp;show_icons=true&amp;theme=dark&amp;bg_color=0d1117&amp;title_color=39d353&amp;icon_color=39d353&amp;hide_border=false&amp;border_color=30363d&amp;locale=pt-br" width="48%" alt="Estatísticas do GitHub">
+</p>
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Adryanrib&amp;bg_color=0d1117&amp;color=8b949e&amp;line=39d353&amp;point=39d353&amp;area=true&amp;hide_border=true" width="100%" alt="Gráfico de atividade">
+</p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adryanrib&amp;layout=compact&amp;theme=dark&amp;bg_color=0d1117&amp;title_color=39d353&amp;hide_border=true" width="48%" alt="Linguagens">
+  <img src="https://streak-stats.demolab.com?user=Adryanrib&amp;theme=github-dark&amp;ring=39d353&amp;fire=39d353&amp;currStreakLabel=39d353&amp;hide_border=true" width="48%" alt="Sequência de contribuições">
 </p>
 
 <p align="center">
@@ -21,26 +32,3 @@ Tenho 18 anos e sou natural de Goianésia, Goiás. Desde criança sempre tive gr
 <p>
   <img src="https://skillicons.dev/icons?i=html,css,js,python,git,github,vscode" alt="Tecnologias">
 </p>
-
----
-
-### 📊 Estatísticas
-
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Adryanrib&show_icons=true&theme=tokyonight&locale=pt-br&hide_border=true&cache_seconds=21600" alt="GitHub Stats">
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adryanrib&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9&hide_border=true&cache_seconds=21600" alt="Linguagens">
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=Adryanrib&theme=tokyonight&hide_border=true&locale=pt_BR" alt="Sequência de contribuições">
-</p>
-
----
-
-### 🐍 Contribuições
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Adryanrib/Adryanrib/output/github-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Adryanrib/Adryanrib/output/github-snake.svg">
-  <img alt="Gráfico de contribuições animado" src="https://raw.githubusercontent.com/Adryanrib/Adryanrib/output/github-snake.svg">
-</picture>
