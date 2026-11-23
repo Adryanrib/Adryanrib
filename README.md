@@ -1,8 +1,5 @@
-<h1 align="center">Adryan Ribeiro Oliveira</h1>
-
 <p align="center">
-  <b><code>Engenheiro de Software</code></b><br>
-  Goianésia, Goiás 🇧🇷
+  <img src="panel.svg" alt="Adryan Ribeiro Oliveira — Engenheiro de Software" width="100%">
 </p>
 
 <p align="center">
