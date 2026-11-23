@@ -11,7 +11,7 @@
 
 <table>
 <tr>
-<td valign="top"><a href="https://adryanribee.github.io/adryanribee/terminal/"><img src="./portrait.png" width="420" alt="Adryan Ribeiro — clique para abrir o terminal interativo" /></a></td>
+<td valign="top"><a href="https://adryanribee.github.io/adryanribee/terminal/"><img src="./portrait-animated.svg" width="420" alt="Adryan Ribeiro — clique para abrir o terminal interativo" /></a></td>
 <td valign="top"><img src="./stats.svg?v=ptbr-2" width="420" alt="Estatísticas de contribuições — atualizadas diariamente" /></td>
 </tr>
 </table>
