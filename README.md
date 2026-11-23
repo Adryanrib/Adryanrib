@@ -2,7 +2,7 @@
 
 <h3><code>adryan@github ~ $ ./contribuicoes.sh</code></h3>
 
-<img src="./contrib-heatmap.svg" width="860" alt="Gráfico de contribuições do GitHub — atualizado diariamente" />
+<img src="./contrib-heatmap.svg?v=ptbr-2" width="860" alt="Gráfico de contribuições do GitHub — atualizado diariamente" />
 
 <br>
 <br>
@@ -12,7 +12,7 @@
 <table>
 <tr>
 <td valign="top"><img src="./portrait.png" width="420" alt="Adryan Ribeiro — retrato ASCII" /></td>
-<td valign="top"><img src="./stats.svg" width="420" alt="Estatísticas de contribuições — atualizadas diariamente" /></td>
+<td valign="top"><img src="./stats.svg?v=ptbr-2" width="420" alt="Estatísticas de contribuições — atualizadas diariamente" /></td>
 </tr>
 </table>
 
