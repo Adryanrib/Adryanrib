@@ -11,7 +11,7 @@
 
 <table>
 <tr>
-<td valign="top"><img src="./adryan-ascii.svg" width="420" alt="Adryan Ribeiro — ASCII portrait" /></td>
+<td valign="top"><img <img src="./portrait.png" width="420" alt="Adryan Ribeiro — ASCII portrait" /></td>
 <td valign="top"><img src="./stats.svg" width="420" alt="GitHub contribution statistics — updated daily" /></td>
 </tr>
 </table>
