@@ -2,7 +2,7 @@ import datetime as dt, json, os, urllib.request, calendar
 from collections import Counter
 from xml.sax.saxutils import escape
 from pathlib import Path
-U='Adryanrib'
+U='adryanribee'
 MONTHS=['','Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
 def save(name,w,h,body):
     Path(name).write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" font-family="monospace">{body}</svg>')
