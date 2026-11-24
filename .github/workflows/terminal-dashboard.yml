@@ -21,7 +21,7 @@ jobs:
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add contributions-en.svg stats-en.svg profile-data.json
+          git add contributions-animated-en.svg stats-en.svg profile-data.json
           git diff --cached --quiet || git commit -m "Refresh terminal dashboard"
           git pull --rebase
           git push
