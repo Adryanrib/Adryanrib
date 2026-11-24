@@ -39,7 +39,7 @@ for i,d in enumerate(days):
         b+=f'<rect x="{x}" y="{y}" width="13" height="13" rx="2" fill="#b4ffaa" opacity="0"><animate attributeName="opacity" values="0;.85;0" begin="{delay:.2f}s" dur=".6s" fill="freeze"/></rect>'
 for r,n in [(1,'Seg'),(3,'Qua'),(5,'Sex')]: b+=txt(1,36+r*15.2,n,11,'#7d8590')
 b+=txt(39,151,f'{total:,} contribuições desde nov/2026',14)
-save('contrib-heatmap.svg',max(350,39+((len(days)+offset+6)//7)*15.2+12),158,b)
+save('contrib-nov2026.svg',max(860,39+((len(days)+offset+6)//7)*15.2+12),158,b)
 counts=[d['count'] for d in days];active=sum(c>0 for c in counts)
 run=longest=0
 for c in counts:
@@ -62,7 +62,7 @@ months=Counter()
 for d in days: months[d['date'][:7]]+=d['count']
 peak=max(1,*months.values());bw=790/len(months)
 for i,(m,v) in enumerate(sorted(months.items())):
-    x=25+i*bw;h=190*v/peak
+    x=25+i*bw+(bw-min(50,bw*.68))/2;h=190*v/peak
     b+=f'<rect x="{x}" y="{824-h}" width="{min(50,bw*.68)}" height="{h}" fill="#26a641"><animate attributeName="height" from="0" to="{h}" begin="{1+i*.06}s" dur=".6s" fill="freeze"/><animate attributeName="y" from="824" to="{824-h}" begin="{1+i*.06}s" dur=".6s" fill="freeze"/></rect>'
-    b+=txt(x,848,MONTHS[int(m[-2:])],13,'#7d8590')
-save('stats.svg',840,880,b)
+    b+=txt(x+min(50,bw*.68)/2,848,MONTHS[int(m[-2:])]+'/'+m[2:4],13,'#7d8590','text-anchor="middle"')
+save('stats-nov2026.svg',840,880,b)
