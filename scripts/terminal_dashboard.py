@@ -27,7 +27,7 @@ end=max(dt.date(2027,10,31),dt.date.today())
 by_date={d['date']:d for d in days}
 calendar_days=[by_date.get((start+dt.timedelta(days=i)).isoformat(),{'date':(start+dt.timedelta(days=i)).isoformat(),'count':0,'level':0}) for i in range((end-start).days+1)]
 offset=(start.weekday()+1)%7
-colors=['#161b22','#0e4429','#006d32','#26a641','#39d353']
+colors=['#30363d','#0e4429','#006d32','#26a641','#39d353']
 total=sum(d['count'] for d in days)
 b=''
 last=None
@@ -37,12 +37,12 @@ for i,d in enumerate(calendar_days):
     if date.month!=last:
         b+=txt(x,15,MONTHS[date.month],12,'#7d8590');last=date.month
     delay=(week+row*.5)*.065
-    b+=f'<rect x="{x}" y="{y}" width="13" height="13" rx="2" fill="{colors[min(4,d["level"])]}"><animate attributeName="opacity" values="0;1" begin="{delay:.2f}s" dur=".35s" fill="freeze"/></rect>'
+    b+=f'<rect x="{x}" y="{y}" width="13" height="13" rx="2" fill="{colors[min(4,d["level"])]}"/>'
     if d['level']:
         b+=f'<rect x="{x}" y="{y}" width="13" height="13" rx="2" fill="#b4ffaa" opacity="0"><animate attributeName="opacity" values="0;.85;0" begin="{delay:.2f}s" dur=".6s" fill="freeze"/></rect>'
 for r,n in [(1,'Seg'),(3,'Qua'),(5,'Sex')]: b+=txt(1,36+r*15.2,n,11,'#7d8590')
 b+=txt(39,151,f'{total:,} contribuições desde nov/2026',14)
-save('contrib-nov2026.svg',max(860,39+((len(calendar_days)+offset+6)//7)*15.2+12),158,b)
+save('contrib-calendario.svg',max(860,39+((len(calendar_days)+offset+6)//7)*15.2+12),158,b)
 counts=[d['count'] for d in days];active=sum(c>0 for c in counts)
 run=longest=0
 for c in counts:
