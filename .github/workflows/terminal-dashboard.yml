@@ -21,6 +21,7 @@ jobs:
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add contrib-heatmap.svg stats.svg profile-data.json
+          git add contrib-nov2026.svg stats-nov2026.svg profile-data.json
           git diff --cached --quiet || git commit -m "Refresh terminal dashboard"
+          git pull --rebase
           git push
