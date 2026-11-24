@@ -7,7 +7,7 @@
 <br>
 <br>
 
-<h3><code>adryan@github ~ $ quem-sou</code></h3>
+<h3><code>adryan.ribee ~ $ quem-sou</code></h3>
 
 <table>
 <tr>
