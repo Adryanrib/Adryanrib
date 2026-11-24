@@ -22,13 +22,16 @@ except Exception:
     days=json.loads(Path('profile-data.json').read_text())
 days=sorted((d for d in days if d['date'] >= START and d['date'] <= dt.date.today().isoformat()),key=lambda d:d['date'])
 if not days: raise ValueError('Nenhuma data disponível desde novembro de 2026')
-start=dt.date.fromisoformat(days[0]['date'])
+start=dt.date.fromisoformat(START)
+end=max(dt.date(2027,10,31),dt.date.today())
+by_date={d['date']:d for d in days}
+calendar_days=[by_date.get((start+dt.timedelta(days=i)).isoformat(),{'date':(start+dt.timedelta(days=i)).isoformat(),'count':0,'level':0}) for i in range((end-start).days+1)]
 offset=(start.weekday()+1)%7
 colors=['#161b22','#0e4429','#006d32','#26a641','#39d353']
 total=sum(d['count'] for d in days)
 b=''
 last=None
-for i,d in enumerate(days):
+for i,d in enumerate(calendar_days):
     date=dt.date.fromisoformat(d['date']); week,row=divmod(i+offset,7)
     x=39+week*15.2; y=25+row*15.2
     if date.month!=last:
@@ -39,7 +42,7 @@ for i,d in enumerate(days):
         b+=f'<rect x="{x}" y="{y}" width="13" height="13" rx="2" fill="#b4ffaa" opacity="0"><animate attributeName="opacity" values="0;.85;0" begin="{delay:.2f}s" dur=".6s" fill="freeze"/></rect>'
 for r,n in [(1,'Seg'),(3,'Qua'),(5,'Sex')]: b+=txt(1,36+r*15.2,n,11,'#7d8590')
 b+=txt(39,151,f'{total:,} contribuições desde nov/2026',14)
-save('contrib-nov2026.svg',max(860,39+((len(days)+offset+6)//7)*15.2+12),158,b)
+save('contrib-nov2026.svg',max(860,39+((len(calendar_days)+offset+6)//7)*15.2+12),158,b)
 counts=[d['count'] for d in days];active=sum(c>0 for c in counts)
 run=longest=0
 for c in counts:
