@@ -2,7 +2,7 @@
 
 <h3><code>adryanribee@github ~ $ ./contributions.sh</code></h3>
 
-<img src="./contrib-nov2026.svg" width="860" alt="GitHub contributions — updated daily" />
+<img src="./contrib-nov2026.svg?v=en-20261124" width="860" alt="GitHub contributions — updated daily" />
 
 <br>
 <br>
