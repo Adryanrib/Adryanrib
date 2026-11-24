@@ -1,6 +1,6 @@
 <div align="center">
 
-<h3><code>adryan@github ~ $ ./contribuicoes.sh</code></h3>
+<h3><code>adryan.ribee ~ $ ./contribuicoes.sh</code></h3>
 
 <img src="./contrib-calendario.svg" width="860" alt="Gráfico de contribuições do GitHub — atualizado diariamente" />
 
